@@ -187,32 +187,6 @@ public:
         addEdge(node1, node2);
     }
 
-    bool noSConnectedToD(const string& node_D) {
-        for (const auto& entry : adjList) {
-            if (entry.first.back() == 'S') {  // Node có cực S
-                for (const string& neighbor : entry.second) {
-                    if (neighbor == node_D) {
-                        return false;  // Có cực S nối với node_D
-                    }
-                }
-            }
-        }
-        return true;  // Không có cực S nào nối với node_D
-    }
-
-    bool noDConnectedToS(const string& node_S) {
-        for (const auto& entry : adjList) {
-            if (entry.first.back() == 'D') {  // Node có cực D
-                for (const string& neighbor : entry.second) {
-                    if (neighbor == node_S) {
-                        return false;  // Có cực D nối với node_S
-                    }
-                }
-            }
-        }
-        return true;  // Không có cực D nào nối với node_S
-    }
-
     void addEdgeParallel(int type, const string& node1 = "", const string& node2 = "", const vector<string>& inter_arr = {}, int mode = 0) {
         if (type == 1) {
             string n1 = node1 + "S";
@@ -241,33 +215,21 @@ public:
             cout << "node2_deg: " << node2_deg << endl;
             cout << "node1_degree: " << node1_degree << endl;
             cout << "node2_degree: " << node2_degree << endl;
-            int s = (node1_degree < node2_degree) ? 1 : 2;   // NVL temp
-            // int s = (node1_degree <= node2_degree) ? 1 : 2;
+            // int s = (node1_degree < node2_degree) ? 1 : 2;   // NVL temp
+            int s = (node1_degree <= node2_degree) ? 1 : 2;
             if (s == 1) {
                 addEdge(n1, node1_deg);
                 string node1_first = node1_deg.substr(0, 1);
-                string node1_D = node1_first + "D";  // Tạo node1_first[D]
-                string node1_S = node1_first + "S";  // Tạo node1_first[S]
-                if (noSConnectedToD(node1_D) && noDConnectedToS(node1_S)) {
-                    string node_connect = lowestDegree("D", node1, "", outside_node);
-                    addEdge(n2, node_connect);
-                    cout << "n1: " << n1 << endl;
-                    cout << "node1_first: " << node1_first << endl;
-                    cout << "node_connect: " << node_connect << endl;
-                    cout << "n2: " << n2 << endl;
-                }
-                else {
-                    string node_connect = lowestDegree("D", node1, node1_first, outside_node);
-                    addEdge(n2, node_connect);
-                    cout << "n1: " << n1 << endl;
-                    cout << "node1_first: " << node1_first << endl;
-                    cout << "node_connect: " << node_connect << endl;
-                    cout << "n2: " << n2 << endl;
-                }
+                string node_connect = lowestDegree("D", node1, "", outside_node);
+                addEdge(n2, node_connect);
+                cout << "n1: " << n1 << endl;
+                cout << "node1_first: " << node1_first << endl;
+                cout << "node_connect: " << node_connect << endl;
+                cout << "n2: " << n2 << endl;
             } else {
                 addEdge(n2, node2_deg);
                 string node2_first = node2_deg.substr(0, 1);
-                string node_connect = lowestDegree("S", node1, node2_first, outside_node);
+                string node_connect = lowestDegree("S", node1, "", outside_node);
                 addEdge(n1, node_connect);
             }
         } else if (type == 3) {
@@ -683,7 +645,6 @@ public:
     vector<string> findHamiltonPath(const string& end_node) {
         vector<string> path;
         // Thử các node bắt đầu bằng 'D' trước
-        cout << "end_node: " << end_node << endl;
         for (const auto& entry : adjList) {
             if (entry.first[1] == 'S') continue;
             if (!end_node.empty()) {
@@ -698,13 +659,6 @@ public:
             }
             if (!path.empty()) break;
         }
-
-        cout << "path: ";
-        for (auto str: path) {
-            cout << str << " ";
-        }
-        cout << endl;
-
         // Nếu không tìm thấy, thử các node bắt đầu bằng 'S'
         if (path.empty()) {
             for (const auto& entry : adjList) {
@@ -1102,7 +1056,6 @@ public:
 
         return {source_flat, out_flat};
     }
-
 };
 
 // Main function
@@ -1166,43 +1119,3 @@ Result CreateAll(const string& expression) {
     result.out_nodes_pmos = out_nodes_pmos;
     return result;
 }
-
-string removeSpaces(const string& str) {
-    string result;
-    for (char c : str) {
-        if (!isspace(static_cast<unsigned char>(c))) {
-            result += c;
-        }
-    }
-    return result;
-}
-
-int main() {
-    string str;
-    string expression;
-    cout << "Enter expression: ";
-    getline(cin, str);
-    expression = removeSpaces(str);
-    cout << "Expression after removing spaces: " << expression << endl;
-    Result result = CreateAll(expression);
-    cout << endl;
-    cout << "NMOS Graph:\n";
-    result.g_nmos.printGraph();
-    cout << "\nPMOS Graph:\n";
-    result.g_pmos.printGraph();
-    cout << "\nEuler Path NMOS: ";
-    for (const auto node : result.euler_path_nmos) cout << node << " ";
-    cout << "\nEuler Path PMOS: ";
-    for (const auto node : result.euler_path_pmos) cout << node << " ";
-    cout << "\nSource Nodes NMOS: ";
-    for (const auto node : result.source_nodes_nmos) cout << node << " ";
-    cout << "\nOut Nodes NMOS: ";
-    for (const auto node : result.out_nodes_nmos) cout << node << " ";
-    cout << "\nSource Nodes PMOS: ";
-    for (const auto node : result.source_nodes_pmos) cout << node << " ";
-    cout << "\nOut Nodes PMOS: ";
-    for (const auto node : result.out_nodes_pmos) cout << node << " ";
-    cout << endl;
-    return 0;
-}
-
