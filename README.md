@@ -49,3 +49,4 @@ Implements the main logic for:
 &nbsp;&nbsp;&nbsp;&nbsp;• Filtering PMOS edges for accurate diagram generation and optimization.
 
 ## 🧪 Results :
+<img src="./assets/.png" width="40" height="40" alt="Result" />
