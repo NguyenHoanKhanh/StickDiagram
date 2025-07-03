@@ -5,7 +5,7 @@ Built with the SFML library to render interactive, color-coded diagrams directly
 
 
 
-🚀 Key Features :
+## 🚀 Key Features :
 
 • Logic Parsing :
 Parses Boolean expressions consisting of logic components and operations to construct NMOS and PMOS transistor networks.
