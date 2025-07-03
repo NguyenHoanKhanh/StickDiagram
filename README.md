@@ -50,4 +50,6 @@ Implements the main logic for:
 
 ## 🧪 Results :
 <img src="./assets/1.png" width="800" alt="Result" />
-
+<img src="./assets/2.png" width="800" alt="Result" />
+<img src="./assets/3.png" width="800" alt="Result" />
+<img src="./assets/4.png" width="800" alt="Result" />
