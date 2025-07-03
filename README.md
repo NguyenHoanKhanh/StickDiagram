@@ -26,7 +26,7 @@ Organizes code into independent modules:
 &nbsp;&nbsp;&nbsp;&nbsp;• graph: manages graph creation, connectivity, and Euler path computation
 
 ## 🧩 Project Components
-• draw_stick_diagram.cpp :
+• src=("https://github.com/NguyenHoanKhanh/StickDiagram/blob/main/draw_stick_diagram.cpp"):
 Entry-point of the application. Handles:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• User input.
