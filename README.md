@@ -28,13 +28,13 @@ Organizes code into independent modules:
 ## 🧩 Project Components
 • draw_stick_diagram.cpp :
 Entry-point of the application. Handles:
-• User input.
-• SFML window creation.
-• Diagram rendering pipeline.
+&nbsp;&nbsp;&nbsp;&nbsp;• User input.
+&nbsp;&nbsp;&nbsp;&nbsp;• SFML window creation.
+&nbsp;&nbsp;&nbsp;&nbsp;• Diagram rendering pipeline.
 Integrates all core functionalities: expression handling, edge extraction, and stick diagram drawing.
 • expression_euler_path.cpp :
 Implements the main logic for:
-• Parsing Boolean expressions.
-• Constructing NMOS/PMOS graphs.
-• Computing Euler paths.
-• Filtering PMOS edges for accurate diagram generation and optimization.
+&nbsp;&nbsp;&nbsp;&nbsp;• Parsing Boolean expressions.
+&nbsp;&nbsp;&nbsp;&nbsp;• Constructing NMOS/PMOS graphs.
+&nbsp;&nbsp;&nbsp;&nbsp;• Computing Euler paths.
+&nbsp;&nbsp;&nbsp;&nbsp;• Filtering PMOS edges for accurate diagram generation and optimization.
