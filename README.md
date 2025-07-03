@@ -27,7 +27,7 @@ Organizes code into independent modules:
 
 ## 🧩 Project Components
 • [`draw_stick_diagram.cpp`](https://github.com/NguyenHoanKhanh/StickDiagram/blob/main/draw_stick_diagram.cpp):  
-&nbsp;&nbsp;&nbsp;&nbsp;Entry point of the application. Handles:
+&nbsp;&nbsp;&nbsp;&nbsp;Entry point of the application.   Handles:
 &nbsp;&nbsp;&nbsp;&nbsp;• User input.
 
 &nbsp;&nbsp;&nbsp;&nbsp;• SFML window creation.
