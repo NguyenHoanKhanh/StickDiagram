@@ -47,3 +47,5 @@ Implements the main logic for:
 &nbsp;&nbsp;&nbsp;&nbsp;• Computing Euler paths.
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Filtering PMOS edges for accurate diagram generation and optimization.
+
+## 🧪 Results :
