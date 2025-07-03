@@ -20,10 +20,10 @@ Layouts are dynamically generated based on parsed expressions and Euler paths.
 • Error Handling :
 Validates Boolean expressions and reports issues clearly through console error messages.
 
-• Modular Design :
-Organizes code into independent modules:
-• expr: handles Boolean expression parsing and evaluation
-• graph: manages graph creation, connectivity, and Euler path computation
+• Modular Design:  
+Organizes code into independent modules:  
+&nbsp;&nbsp;&nbsp;&nbsp;• expr: handles Boolean expression parsing and evaluation  
+&nbsp;&nbsp;&nbsp;&nbsp;• graph: manages graph creation, connectivity, and Euler path computation
 
 ## 🧩 Project Components
 • draw_stick_diagram.cpp :
