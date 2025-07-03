@@ -60,5 +60,18 @@ Implements the main logic for:
 • Result will be display on screen : 
 <img src="./assets/5.png" width="800" alt="Result" />
 
-## ✅ Evaluation
+## ✅ Evaluation :
+The project effectively generates accurate CMOS stick diagrams from Boolean expressions, with the following highlights:
 
+&nbsp;&nbsp;&nbsp;&nbsp;• Expression Support:
+        Handles 100% of expressions with 3 variables, approximately 90% with 4 variables, and around 75% with 5 variables.
+        Currently supports only AND/OR logic operations and does not handle repeated variables.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Graph Accuracy:
+        Constructs and filters NMOS/PMOS graphs to ensure valid Euler paths, with verification output provided via console.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Visualization:
+        Generates clear, color-coded stick diagrams (VDD, GND, P-diff, N-diff, logic elements) using the SFML library.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Error Handling:
+        Detects empty or malformed expressions, and provides detailed console warnings along with fallback messages in the SFML window.
