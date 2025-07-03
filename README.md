@@ -49,6 +49,9 @@ Implements the main logic for:
 &nbsp;&nbsp;&nbsp;&nbsp;• Filtering PMOS edges for accurate diagram generation and optimization.
 
 ## 🧪 Results :
+
+• This example is program process expression 4 variable : A+B+C+D
+
 <img src="./assets/1.png" width="800" alt="Result" />
 <img src="./assets/2.png" width="800" alt="Result" />
 <img src="./assets/3.png" width="800" alt="Result" />
