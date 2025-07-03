@@ -64,6 +64,7 @@ Implements the main logic for:
 The project effectively generates accurate CMOS stick diagrams from Boolean expressions, with the following highlights:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Expression Support:
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Handles 100% of expressions with 3 variables, approximately 90% with 4 variables, and around 75% with 5 variables.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Currently supports only AND/OR logic operations and does not handle repeated variables.
