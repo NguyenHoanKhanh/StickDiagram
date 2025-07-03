@@ -59,3 +59,6 @@ Implements the main logic for:
 
 • Result will be display on screen : 
 <img src="./assets/5.png" width="800" alt="Result" />
+
+## ✅ Evaluation
+
