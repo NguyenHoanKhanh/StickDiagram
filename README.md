@@ -35,7 +35,7 @@ Organizes code into independent modules:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Diagram rendering pipeline.
 
-Integrates all core functionalities: expression handling, edge extraction, and stick diagram drawing.
+&nbsp;&nbsp;&nbsp;&nbsp;• Integrates all core functionalities: expression handling, edge extraction, and stick diagram drawing.
 
 • [`expression_euler_path.cpp`](https://github.com/NguyenHoanKhanh/StickDiagram/blob/main/expression_euler_path.cpp):
 Implements the main logic for:
