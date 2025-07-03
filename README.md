@@ -58,3 +58,4 @@ Implements the main logic for:
 <img src="./assets/4.png" width="800" alt="Result" />
 
 • Result will be display on screen : 
+<img src="./assets/5.png" width="800" alt="Result" />
