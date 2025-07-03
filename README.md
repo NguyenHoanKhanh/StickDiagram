@@ -56,3 +56,5 @@ Implements the main logic for:
 <img src="./assets/2.png" width="800" alt="Result" />
 <img src="./assets/3.png" width="800" alt="Result" />
 <img src="./assets/4.png" width="800" alt="Result" />
+
+• Result will be display on screen : 
