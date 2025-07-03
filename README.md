@@ -8,25 +8,18 @@ Built with the SFML library to render interactive, color-coded diagrams directly
 🚀 Key Features :
 • Logic Parsing :
 Parses Boolean expressions consisting of logic components and operations to construct NMOS and PMOS transistor networks.
-
 • Graph-Based Representation :
 Models transistor connectivity using graph structures to represent cascaded and parallel configurations.
 Utilizes Euler Path algorithms to optimize transistor layout for stick diagrams.
-
 • SFML Visualization :
 Renders color-coded CMOS stick diagrams — including VDD, GND, P-diff, and N-diff — using the SFML graphics library.
 Layouts are dynamically generated based on parsed expressions and Euler paths.
-
 • Error Handling :
 Validates Boolean expressions and reports issues clearly through console error messages.
-
 • Modular Design :
 Organizes code into independent modules:
-
 • expr: handles Boolean expression parsing and evaluation
-
 • graph: manages graph creation, connectivity, and Euler path computation
-
 
 ## 🧩 Project Components
 • draw_stick_diagram.cpp :
