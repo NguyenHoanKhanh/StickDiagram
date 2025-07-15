@@ -11,6 +11,7 @@ Built with the **SFML** library to render interactive, color-coded diagrams dire
 - [🧩 Project Components](#-project-components)
 - [🧪 Results](#-results)
 - [✅ Evaluation](#-evaluation)
+- [🤝 Collaboration](#-collaboration)
 
 ---
 
@@ -96,6 +97,21 @@ The project effectively generates accurate CMOS stick diagrams from Boolean expr
 - Detects empty or malformed expressions.
 - Provides detailed console warnings.
 - Displays fallback messages in SFML window.
+
+---
+
+## 🤝 Collaboration
+
+This project was collaboratively developed by:
+
+- [**NguyenHoanKhanh**](https://github.com/NguyenHoanKhanh)  
+  • Developed the main application interface, SFML rendering logic, and stick diagram layout logic.
+
+- [**so1taynguyen**](https://github.com/so1taynguyen)  
+  • Designed and implemented the `expression_euler_path.cpp` module, including:
+    - Boolean expression parsing  
+    - NMOS/PMOS graph construction  
+    - Euler path computation and PMOS edge filtering
 
 ---
 
