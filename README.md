@@ -3,8 +3,6 @@ Developed a visual tool for generating CMOS stick diagrams from Boolean expressi
 The tool supports logic parsing, transistor network construction, and layout optimization using Euler path computation.
 Built with the SFML library to render interactive, color-coded diagrams directly on screen.
 
-
-
 ## 🚀 Key Features :
 
 • Logic Parsing :
